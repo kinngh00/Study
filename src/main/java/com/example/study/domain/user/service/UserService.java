@@ -55,11 +55,4 @@ public class UserService {
 
     userRepository.deleteById(id);
   }
-
-  public UserResponseDto login(String email, String password) {
-    User user = userRepository.findByEmail(email.trim().toLowerCase())
-        .orElseThrow(() -> new IllegalArgumentException("아이디 또는 비밀번호가 틀렸습니다."));
-
-
-  }
 }
